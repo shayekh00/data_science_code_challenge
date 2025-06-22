@@ -28,3 +28,14 @@ def create_forecasting_dataset(df, window_size=30, target_col='snow'):
         all_dates.append(target_row['date'])
 
     return np.array(all_X), np.array(all_y), all_dates
+
+
+def separate_X_y(df, target_col='snow_tomorrow', drop_cols=['date']):
+    # Check that target exists
+    assert target_col in df.columns, f"Target column '{target_col}' not found in DataFrame."
+    
+    # Drop target and any specified columns from features
+    X = df.drop(columns=[target_col] + drop_cols, errors='ignore')
+    y = df[target_col].astype(int)
+    
+    return X, y

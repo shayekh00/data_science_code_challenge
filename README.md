@@ -8,7 +8,10 @@ The goal of this project is to analyze and model weather station data to predict
 
 ## 🧠 Solution Structure
 
-This repository is organized for clarity, reproducibility, and scalability. It includes:
+This repository is organized for clarity, reproducibility, and scalability.
+The data notebooks contain all the decision regarding all the data processing decisions.
+Please kindly run the notebooks from start to end in order to run the solution. 
+It includes:
 
 ### 🧪 Notebooks
 - `Data_Exploration.ipynb`  
